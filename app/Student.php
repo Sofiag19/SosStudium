@@ -17,4 +17,14 @@ class Student extends Model
         'email',
         'profile_img'
     ];
+
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
+
+    public function professors()
+    {
+        return $this->belongsToMany(Professor::class);
+    }
 }

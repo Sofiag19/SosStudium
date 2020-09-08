@@ -17,4 +17,29 @@ class Professor extends Model
         'email',
         'profile_img'
     ];
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class);
+    }
+
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
+
+    public function lectureNote()
+    {
+        return $this->belongsTo(LectureNote::class);
+    }
+
+    public function fileProf()
+    {
+        return $this->belongsTo(FileProf::class);
+    }
+
+    public function article()
+    {
+        return $this->belongsTo(Article::class);
+    }
 }

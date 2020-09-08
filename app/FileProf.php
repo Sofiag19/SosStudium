@@ -13,4 +13,9 @@ class FileProf extends Model
         'description',
         'file_data'
     ];
+
+    public function professor()
+    {
+        return $this->belongsTo(Professor::class);
+    }
 }

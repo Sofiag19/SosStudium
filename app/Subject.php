@@ -12,4 +12,14 @@ class Subject extends Model
         'title',
         'difficulty'
     ];
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class);
+    }
+
+    public function professors()
+    {
+        return $this->belongsToMany(Professors::class);
+    }
 }

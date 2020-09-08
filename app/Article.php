@@ -14,4 +14,9 @@ class Article extends Model
         'img',
         'pub_date'
     ];
+
+    public function professor() 
+    {
+        return $this->belongsTo(Professor::class);
+    }
 }
